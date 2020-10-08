@@ -3,3 +3,13 @@ D:\Escritorio\Parcial\Parcial\DAL\bin\Debug\DAL.pdb
 D:\Escritorio\Parcial\Parcial\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\Escritorio\Parcial\Parcial\DAL\obj\Debug\DAL.dll
 D:\Escritorio\Parcial\Parcial\DAL\obj\Debug\DAL.pdb
+D:\Escritorio\myparcial\DAL\bin\Debug\DAL.dll
+D:\Escritorio\myparcial\DAL\bin\Debug\DAL.pdb
+D:\Escritorio\myparcial\DAL\bin\Debug\Entity.dll
+D:\Escritorio\myparcial\DAL\bin\Debug\Entity.pdb
+D:\Escritorio\myparcial\DAL\bin\Debug\Entity.exe.config
+D:\Escritorio\myparcial\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\Escritorio\myparcial\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Escritorio\myparcial\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Escritorio\myparcial\DAL\obj\Debug\DAL.dll
+D:\Escritorio\myparcial\DAL\obj\Debug\DAL.pdb

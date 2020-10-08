@@ -36,5 +36,12 @@ namespace Entity
         public abstract void CalcularR();
         public abstract void CalcularIncremento();
         public abstract void CalcularS();
+
+        public bool Aplica()
+        {
+            if (PersonaLiquidada.Sexo != "F" && PersonaLiquidada.Edad >= 57) return true;
+            if (PersonaLiquidada.Sexo != "M" && PersonaLiquidada.Edad >= 62) return true;
+            else return false;
+        }
     }
 }

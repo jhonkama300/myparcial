@@ -9,6 +9,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel.Design;
 using Microsoft.SqlServer.Server;
 using Entity;
+using BLL;
 
 namespace Presentacion
 {
@@ -16,23 +17,110 @@ namespace Presentacion
     {
         public static void Main()
         {
-            Persona p1 = new Persona(1234,"jhon", 1450, "Empleado", "M", 68);
-            Liquidacion liquiadacion = new LiquidacionEmpleado(p1,980657.00,1);
-            Console.WriteLine("S = {0}", liquiadacion.S);
-            Console.WriteLine("R = {0}", liquiadacion.R);
-            Console.WriteLine("R+Incremento = {0}", liquiadacion.R + liquiadacion.Incremento);
-            Console.WriteLine("Incremento = {0}", liquiadacion.Incremento);
-            Console.WriteLine("Liquidacion = {0}", liquiadacion.TotalLiquidacion);
-            Persona p2 = new Persona(1234, "jhon", 1550, "Servidor Publico", "M", 55);
-            Liquidacion liquiadacionS = new LiquidacionServidorPublico(p2, 3000003.00, 2);
-            Console.WriteLine("S = {0}", liquiadacionS.S);
-            Console.WriteLine("R = {0}", liquiadacionS.R);
-            Console.WriteLine("R+Incremento = {0}", liquiadacionS.R + liquiadacionS.Incremento);
-            Console.WriteLine("Incremento = {0}", liquiadacionS.Incremento);
-            Console.WriteLine("Liquidacion = {0}", liquiadacionS.TotalLiquidacion);
-            Console.ReadKey();
+            new Administrar();
         }
     }
 
+    class Administrar
+    {
+        public Administrar()
+        {
+            Opciones(Menu());
+        }
+
+        public int Menu()
+        {
+            Console.Clear();
+            Console.WriteLine("opciones");
+            Console.WriteLine("guardar     (1)");
+            Console.WriteLine("buscar      (2)");
+            Console.WriteLine("modificar   (3)");
+            Console.WriteLine("eliminar    (4)\n");
+            Console.WriteLine("salir       (0)\n");
+            return (int)ValidarNumero(">>> ");
+        }
+
+        public void Opciones(int Opcion)
+        {
+            switch (Opcion)
+            {
+                case 0: {  break; }
+                case 1: { ValidarGuardado(); Console.ReadKey(); break; }
+                case 2: { break; }
+                case 3: { break; }
+                case 4: { break; }
+                default: { break; }
+
+            }
+        }
+
+        public Persona DatosPersona()
+        {
+            string Nombre, Sexo, Tipo;
+            long Cedula;
+            int SemanasCotizadad,Edad;
+            
+            Console.Write("Nombre: "); Nombre = Console.ReadLine();
+            Cedula = (long)ValidarNumero("Documento: ");
+            Edad = (int)ValidarNumero("Edad: ");
+            Console.Write("sexo M/F: "); Sexo = Console.ReadLine();
+            Sexo = Sexo.ToUpper();
+            Console.Write("Tipo E/S: "); Tipo = Console.ReadLine();
+            Tipo = Tipo.ToUpper();
+            if (Tipo.Equals("E")) Tipo = "Empleado";
+            else Tipo = "Servidor publico";
+            SemanasCotizadad = (int)ValidarNumero("Semanas cotizadas: ");
+            if (SemanasCotizadad >= 1300)
+            {
+                return new Persona(Cedula, Nombre, SemanasCotizadad, Tipo, Sexo, Edad);
+            }
+            else return null;
+        }
+
+        public Liquidacion DatosLiquidacion()
+        {
+            Persona personaLiquidada = DatosPersona();
+            double IBL; long NumeroLiquidacion;
+            IBL = ValidarNumero("IBL: ");
+            NumeroLiquidacion = (long)ValidarNumero("Numero de liquidacion: ");
+            if(personaLiquidada != null)
+            {
+                if (personaLiquidada.Tipo.Equals("Empleado")) return new LiquidacionEmpleado(personaLiquidada, IBL, NumeroLiquidacion);
+                else return new LiquidacionServidorPublico(personaLiquidada, IBL, NumeroLiquidacion);
+            }
+            else
+            {
+                Console.WriteLine("El numero de semanas no es admitido");
+                return null;
+            }
+            
+        }
+
+        public void ValidarGuardado()
+        {
+            Liquidacion liquidacion = DatosLiquidacion();
+            if (liquidacion != null)
+            {
+                new ServiciosLiquidacion().GuardarLiquidacion(liquidacion);
+            }
+            else Console.WriteLine("La liquidacion no cumple las caracteristicas admitidas");
+        }
+
+        public double ValidarNumero(string NombreVariable)
+        {
+            double variable;
+            try
+            {
+                Console.Write(NombreVariable);
+                variable = double.Parse(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("no es un numero");
+                variable = ValidarNumero(NombreVariable);
+            }
+            return variable;
+        }
+    }
    
 }

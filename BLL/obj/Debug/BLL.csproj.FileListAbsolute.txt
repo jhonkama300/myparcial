@@ -7,3 +7,15 @@ D:\Escritorio\Parcial\Parcial\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 D:\Escritorio\Parcial\Parcial\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\Escritorio\Parcial\Parcial\BLL\obj\Debug\BLL.dll
 D:\Escritorio\Parcial\Parcial\BLL\obj\Debug\BLL.pdb
+D:\Escritorio\myparcial\BLL\bin\Debug\BLL.dll
+D:\Escritorio\myparcial\BLL\bin\Debug\BLL.pdb
+D:\Escritorio\myparcial\BLL\bin\Debug\DAL.dll
+D:\Escritorio\myparcial\BLL\bin\Debug\Entity.dll
+D:\Escritorio\myparcial\BLL\bin\Debug\DAL.pdb
+D:\Escritorio\myparcial\BLL\bin\Debug\Entity.pdb
+D:\Escritorio\myparcial\BLL\bin\Debug\Entity.exe.config
+D:\Escritorio\myparcial\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+D:\Escritorio\myparcial\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Escritorio\myparcial\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Escritorio\myparcial\BLL\obj\Debug\BLL.dll
+D:\Escritorio\myparcial\BLL\obj\Debug\BLL.pdb
