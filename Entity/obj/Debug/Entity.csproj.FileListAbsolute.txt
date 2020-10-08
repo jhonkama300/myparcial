@@ -1,0 +1,7 @@
+D:\Escritorio\Parcial\Parcial\Entity\bin\Debug\Entity.exe.config
+D:\Escritorio\Parcial\Parcial\Entity\bin\Debug\Entity.exe
+D:\Escritorio\Parcial\Parcial\Entity\bin\Debug\Entity.pdb
+D:\Escritorio\Parcial\Parcial\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
+D:\Escritorio\Parcial\Parcial\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+D:\Escritorio\Parcial\Parcial\Entity\obj\Debug\Entity.exe
+D:\Escritorio\Parcial\Parcial\Entity\obj\Debug\Entity.pdb
