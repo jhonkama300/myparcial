@@ -46,7 +46,7 @@ namespace Presentacion
             {
                 case 0: {  break; }
                 case 1: { ValidarGuardado(); Console.ReadKey(); break; }
-                case 2: { break; }
+                case 2: { ConsultarLiquidaciones(); Console.ReadKey();  break; }
                 case 3: { break; }
                 case 4: { break; }
                 default: { break; }
@@ -106,6 +106,30 @@ namespace Presentacion
             else Console.WriteLine("La liquidacion no cumple las caracteristicas admitidas");
         }
 
+        public void ConsultarLiquidaciones()
+        {
+            List<Liquidacion> Liquidaciones = new ServiciosLiquidacion().ConsultarLiquidaciones();
+            foreach(Liquidacion i in Liquidaciones)
+            {
+                MostrarLiquidacion(i);
+                Console.WriteLine();
+            }
+        }
+
+        public void MostrarLiquidacion(Liquidacion liquidacion) {
+            Console.WriteLine("Numero de liquidacion: {0}", liquidacion.NumeroLiquidacion);
+            Console.WriteLine("Nombre: {0}", liquidacion.PersonaLiquidada.Nombre);
+            Console.WriteLine("Documento: {0}", liquidacion.PersonaLiquidada.Documento);
+            Console.WriteLine("Edad: {0}", liquidacion.PersonaLiquidada.Edad);
+            Console.WriteLine("Sexo: {0}", liquidacion.PersonaLiquidada.Sexo);
+            Console.WriteLine("Tipo: {0}", liquidacion.PersonaLiquidada.Tipo);
+            Console.WriteLine("Semanas cotizadas: {0}", liquidacion.PersonaLiquidada.SemanasCotizadas);
+            Console.WriteLine("IBL: {0}", liquidacion.IBL);
+            Console.WriteLine("R: {0}", liquidacion.R);
+            Console.WriteLine("Incremento: {0}", liquidacion.Incremento);
+            Console.WriteLine("Liquidacion: {0}", liquidacion.TotalLiquidacion);
+            Console.WriteLine("Aplica: {0}", liquidacion.Aplica());
+        }
         public double ValidarNumero(string NombreVariable)
         {
             double variable;

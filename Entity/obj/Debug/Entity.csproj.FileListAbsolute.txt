@@ -4,3 +4,9 @@ D:\Escritorio\Parcial\Parcial\Entity\obj\Debug\Entity.csprojAssemblyReference.ca
 D:\Escritorio\Parcial\Parcial\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
 D:\Escritorio\Parcial\Parcial\Entity\obj\Debug\Entity.dll
 D:\Escritorio\Parcial\Parcial\Entity\obj\Debug\Entity.pdb
+D:\Escritorio\myparcial\Entity\bin\Debug\Entity.dll
+D:\Escritorio\myparcial\Entity\bin\Debug\Entity.pdb
+D:\Escritorio\myparcial\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
+D:\Escritorio\myparcial\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+D:\Escritorio\myparcial\Entity\obj\Debug\Entity.dll
+D:\Escritorio\myparcial\Entity\obj\Debug\Entity.pdb

@@ -15,5 +15,10 @@ namespace BLL
         {
             repository.GuardarLiquidacion(liquidacion);
         }
+
+        public List<Liquidacion> ConsultarLiquidaciones()
+        {
+            return repository.CosultarTodos();
+        }
     }
 }
