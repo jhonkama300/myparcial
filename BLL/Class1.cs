@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    class Program
+    class Class1
     {
-        static void Main(string[] args)
-        {
-        }
+      
     }
 }
