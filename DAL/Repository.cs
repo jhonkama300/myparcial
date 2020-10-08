@@ -72,5 +72,23 @@ namespace DAL
                 }
             }
         }
+
+        public void ModificarLiquidacion(long NumeroLiquidacion, int SemanasCotizadas)
+        {
+            List<Liquidacion> Liquidaciones = CosultarTodos();
+            FileStream file = new FileStream(direccionArchivo, FileMode.Create);
+            file.Close();
+            foreach (Liquidacion i in Liquidaciones)
+            {
+                if (NumeroLiquidacion != i.NumeroLiquidacion)
+                {
+                    GuardarLiquidacion(i);
+                }
+                else
+                {
+                    i.PersonaLiquidada.SemanasCotizadas = SemanasCotizadas;
+                }
+            }
+        }
     }
 }

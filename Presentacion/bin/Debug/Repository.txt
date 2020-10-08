@@ -1,1 +1,2 @@
-jhon;1234;Empleado;M;55;1450;980567;2
+jhon;1234;Empleado;M;55;1550;980567;2
+jhon;1234;Servidor publico;F;68;2000;5000000;3

@@ -31,12 +31,12 @@ namespace Presentacion
         public int Menu()
         {
             Console.Clear();
-            Console.WriteLine("opciones");
-            Console.WriteLine("guardar     (1)");
-            Console.WriteLine("buscar      (2)");
-            Console.WriteLine("modificar   (3)");
-            Console.WriteLine("eliminar    (4)\n");
-            Console.WriteLine("salir       (0)\n");
+            Console.WriteLine("\tOpciones");
+            Console.WriteLine("Guardar     (1)");
+            Console.WriteLine("Buscar      (2)");
+            Console.WriteLine("Modificar   (3)");
+            Console.WriteLine("Eliminar    (4)\n");
+            Console.WriteLine("Salir       (0)\n");
             return (int)ValidarNumero(">>> ");
         }
 
@@ -45,11 +45,11 @@ namespace Presentacion
             switch (Opcion)
             {
                 case 0: {  break; }
-                case 1: { ValidarGuardado(); Console.ReadKey(); break; }
-                case 2: { ConsultarLiquidaciones(); Console.ReadKey();  break; }
-                case 3: { break; }
-                case 4: { EliminarLiquidacion(); Console.ReadKey(); break; }
-                default: { break; }
+                case 1: { Console.Clear(); ValidarGuardado(); Console.ReadKey(); new Administrar(); break; }
+                case 2: { Console.Clear(); ConsultarLiquidaciones(); Console.ReadKey(); new Administrar(); break; }
+                case 3: { Console.Clear(); ModificarLiquidacion(); Console.ReadKey(); new Administrar(); break; }
+                case 4: { Console.Clear(); EliminarLiquidacion(); Console.ReadKey(); new Administrar(); break; }
+                default: { new Administrar(); break; }
 
             }
         }
@@ -152,6 +152,30 @@ namespace Presentacion
             Console.WriteLine();
             long NumeroLiquidacion = (long)ValidarNumero("Numero de liquidacion: ");
             new ServiciosLiquidacion().EliminarLiquidacion(NumeroLiquidacion);
+        }
+
+
+        public void ModificarLiquidacion()
+        {
+            ConsultarLiquidaciones();
+            Console.WriteLine();
+            long NumeroLiquidacion = (long)ValidarNumero("Numero de liquidacion: ");
+            int SemanasCotizadas = (int)ValidarNumero("Semanas Cotizadas: ");
+            List<Liquidacion> liquidacions = new ServiciosLiquidacion().ConsultarLiquidaciones();
+            foreach(Liquidacion i in liquidacions)
+            {
+                if(NumeroLiquidacion == i.NumeroLiquidacion)
+                {
+                    i.PersonaLiquidada.SemanasCotizadas = SemanasCotizadas;
+                    i.CalcularS();
+                    i.CalcularR();
+                    i.CalcularIncremento();
+                    i.CalcularLiquidacion();
+                    MostrarLiquidacion(i);
+                    new ServiciosLiquidacion().EliminarLiquidacion(NumeroLiquidacion);
+                    new ServiciosLiquidacion().GuardarLiquidacion(i);
+                }
+            }
         }
     }
    
