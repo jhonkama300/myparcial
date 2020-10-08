@@ -51,11 +51,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{82b77c96-603c-45e7-af8d-acff90983d1d}</Project>
+      <Project>{470bdd78-d519-451e-b5e1-a5fb4efeaec0}</Project>
       <Name>BLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entity\Entity.csproj">
-      <Project>{a953f4e1-9ff3-4c94-be9c-850f8a5146b9}</Project>
+      <Project>{c04878c9-c98e-4fb3-8874-0137b63e09a7}</Project>
       <Name>Entity</Name>
     </ProjectReference>
   </ItemGroup>

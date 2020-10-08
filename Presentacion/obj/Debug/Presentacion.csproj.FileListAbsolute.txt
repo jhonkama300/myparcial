@@ -1,14 +1,12 @@
 D:\Escritorio\Parcial\Parcial\Presentacion\bin\Debug\Presentacion.exe.config
 D:\Escritorio\Parcial\Parcial\Presentacion\bin\Debug\Presentacion.exe
 D:\Escritorio\Parcial\Parcial\Presentacion\bin\Debug\Presentacion.pdb
-D:\Escritorio\Parcial\Parcial\Presentacion\bin\Debug\BLL.exe
-D:\Escritorio\Parcial\Parcial\Presentacion\bin\Debug\Entity.exe
 D:\Escritorio\Parcial\Parcial\Presentacion\bin\Debug\BLL.pdb
-D:\Escritorio\Parcial\Parcial\Presentacion\bin\Debug\BLL.exe.config
 D:\Escritorio\Parcial\Parcial\Presentacion\bin\Debug\Entity.pdb
-D:\Escritorio\Parcial\Parcial\Presentacion\bin\Debug\Entity.exe.config
 D:\Escritorio\Parcial\Parcial\Presentacion\obj\Debug\Presentacion.csprojAssemblyReference.cache
 D:\Escritorio\Parcial\Parcial\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
 D:\Escritorio\Parcial\Parcial\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 D:\Escritorio\Parcial\Parcial\Presentacion\obj\Debug\Presentacion.exe
 D:\Escritorio\Parcial\Parcial\Presentacion\obj\Debug\Presentacion.pdb
+D:\Escritorio\Parcial\Parcial\Presentacion\bin\Debug\BLL.dll
+D:\Escritorio\Parcial\Parcial\Presentacion\bin\Debug\Entity.dll

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0A141ED4-4C09-446A-A645-B6F7D88D7E44}</ProjectGuid>
+    <ProjectGuid>{ABB07697-27E8-47F9-9830-6917A8AEBEA2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DAL</RootNamespace>
@@ -43,12 +43,6 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Entity\Entity.csproj">
-      <Project>{a953f4e1-9ff3-4c94-be9c-850f8a5146b9}</Project>
-      <Name>Entity</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

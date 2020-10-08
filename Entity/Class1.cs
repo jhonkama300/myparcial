@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    class Class1
+    public class Class1
     {
-        
     }
 }
