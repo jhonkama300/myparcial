@@ -10,7 +10,7 @@ namespace DAL
 {
     public class Repository
     {
-        private static string direccionArchivo = "Repository.txt";
+        public static string direccionArchivo = "Repository.txt";
         
         public void GuardarLiquidacion(Liquidacion Liquidacion)
         {
@@ -55,12 +55,22 @@ namespace DAL
             Persona paciente = new Persona(Documento, Nombre, SemanasCotizadas, Tipo, Sexo, Edad);
             NumeroLiquidacion = long.Parse(matrizLiquidacion[7]);
             IBL = double.Parse(matrizLiquidacion[6]);
-
             if (paciente.Tipo.Equals("Empleado")) return new LiquidacionEmpleado(paciente, IBL, NumeroLiquidacion);
             else return new LiquidacionServidorPublico(paciente, IBL, NumeroLiquidacion);
-
-
         }
 
+        public void EliminarLiquidacion(long NumeroLiquidacion)
+        {
+            List<Liquidacion> Liquidaciones = CosultarTodos();
+            FileStream file = new FileStream(direccionArchivo, FileMode.Create);
+            file.Close();
+            foreach (Liquidacion i in Liquidaciones)
+            {
+                if (NumeroLiquidacion != i.NumeroLiquidacion)
+                {
+                    GuardarLiquidacion(i);
+                }
+            }
+        }
     }
 }

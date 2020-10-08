@@ -20,5 +20,12 @@ namespace BLL
         {
             return repository.CosultarTodos();
         }
+
+        public void EliminarLiquidacion(long NumeroLiquidacion)
+        {
+            repository.EliminarLiquidacion(NumeroLiquidacion);
+        }
+
+        
     }
 }

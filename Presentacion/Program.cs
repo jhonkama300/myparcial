@@ -48,7 +48,7 @@ namespace Presentacion
                 case 1: { ValidarGuardado(); Console.ReadKey(); break; }
                 case 2: { ConsultarLiquidaciones(); Console.ReadKey();  break; }
                 case 3: { break; }
-                case 4: { break; }
+                case 4: { EliminarLiquidacion(); Console.ReadKey(); break; }
                 default: { break; }
 
             }
@@ -144,6 +144,14 @@ namespace Presentacion
                 variable = ValidarNumero(NombreVariable);
             }
             return variable;
+        }
+
+        public void EliminarLiquidacion()
+        {
+            ConsultarLiquidaciones();
+            Console.WriteLine();
+            long NumeroLiquidacion = (long)ValidarNumero("Numero de liquidacion: ");
+            new ServiciosLiquidacion().EliminarLiquidacion(NumeroLiquidacion);
         }
     }
    
